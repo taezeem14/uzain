@@ -22,26 +22,27 @@ h1 {
     font-family: 'Pacifico', cursive;
 }
 .images {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
-  justify-content: center;
-  margin: 30px auto;
-  max-width: 900px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .images img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover; /* Keeps proportions and crops instead of stretch */
+  width: 100%;
+  height: auto; /* No forced height */
   border-radius: 12px;
-  transition: transform 0.3s ease;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .images img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
+
 button {
   padding: 15px 30px;
   background: #ff5f6d;
@@ -126,4 +127,5 @@ button:hover {
   100% { transform: translateY(-120vh); }
 
 }
+
 
