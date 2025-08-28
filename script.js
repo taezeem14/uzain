@@ -1,28 +1,21 @@
-document.getElementById("surpriseBtn").addEventListener("click", () => {
-  confetti({
-    particleCount: 200,
-    spread: 70,
-    origin: { y: 0.6 }
-  });
-});
 const btn = document.getElementById("surpriseBtn");
 const popup = document.getElementById("popup");
+const closePopup = document.getElementById("closePopup");
 
 btn.addEventListener("click", () => {
-  // Show popup
-  popup.style.display = "flex";
+  popup.style.display = "flex"; // Show popup
 
-  // Trigger confetti
-  confetti({
-    particleCount: 200,
-    spread: 70,
-    origin: { y: 0.6 }
-  });
+  // Confetti
+  confetti({ particleCount: 200, spread: 70, origin: { y: 0.6 } });
 
-  // Add balloons
+  // Balloons
   for (let i = 0; i < 10; i++) {
     createBalloon();
   }
+});
+
+closePopup.addEventListener("click", () => {
+  popup.style.display = "none"; // Hide popup
 });
 
 function createBalloon() {
@@ -37,8 +30,3 @@ function createBalloon() {
     balloon.remove();
   }, 6000);
 }
-const closePopup = document.getElementById("closePopup");
-
-closePopup.addEventListener("click", () => {
-  popup.style.display = "none";
-});
