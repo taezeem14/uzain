@@ -21,6 +21,14 @@ body {
 h1 {
     font-family: 'Pacifico', cursive;
 }
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 900px;
+}
 
 .images img {
   width: 150px;
@@ -118,3 +126,4 @@ button:hover {
   100% { transform: translateY(-120vh); }
 
 }
+
