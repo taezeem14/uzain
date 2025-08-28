@@ -1,3 +1,4 @@
+/* ===== Global Styles ===== */
 body {
   font-family: 'Poppins', sans-serif;
   text-align: center;
@@ -6,6 +7,7 @@ body {
   animation: gradientShift 10s ease infinite;
   color: white;
   overflow-x: hidden;
+  margin: 0;
 }
 
 @keyframes gradientShift {
@@ -13,18 +15,24 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-.gallery h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
 
+/* ===== Hero Section ===== */
 .loser {
-    padding: 100px 20px;
+  padding: 100px 20px;
 }
 
 h1 {
-    font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
+
+/* ===== Gallery ===== */
+.gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
 .images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -36,7 +44,7 @@ h1 {
 
 .images img {
   width: 100%;
-  height: auto; /* No forced height */
+  height: auto;
   border-radius: 8px;
   display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -47,16 +55,16 @@ h1 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
+/* ===== Button Styling ===== */
 button {
   padding: 15px 30px;
-  background: #ff5f6d;
+  background: #ff0080;
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
-  background: #ff0080;
   box-shadow: 0 0 20px #ff0080, 0 0 40px #ff0080;
 }
 
@@ -65,14 +73,9 @@ button:hover {
   box-shadow: 0 0 30px #ff4da6, 0 0 60px #ff4da6;
 }
 
-@media (max-width: 600px) {
-  .images {
-    gap: 10px;
-    padding: 10px;
-  }
-
+/* ===== Popup ===== */
 .popup {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
   top: 0;
   left: 0;
@@ -116,7 +119,7 @@ button:hover {
   box-shadow: 0 0 20px #ff4da6;
 }
 
-
+/* ===== Balloons ===== */
 .balloon {
   position: absolute;
   bottom: -100px;
@@ -130,8 +133,21 @@ button:hover {
 @keyframes floatUp {
   0% { transform: translateY(0); }
   100% { transform: translateY(-120vh); }
-
 }
 
-
-
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .gallery h2 {
+    font-size: 1.5rem;
+  }
+  .images {
+    gap: 10px;
+    padding: 10px;
+  }
+  button {
+    width: 90%;
+  }
+}
