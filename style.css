@@ -13,6 +13,10 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+.gallery h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
 
 .loser {
     padding: 100px 20px;
@@ -33,7 +37,7 @@ h1 {
 .images img {
   width: 100%;
   height: auto; /* No forced height */
-  border-radius: 12px;
+  border-radius: 8px;
   display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -62,9 +66,10 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-  h1 { font-size: 24px; }
-  .images img { width: 100px; }
-}
+  .images {
+    gap: 10px;
+    padding: 10px;
+  }
 
 .popup {
   display: none;
@@ -127,5 +132,6 @@ button:hover {
   100% { transform: translateY(-120vh); }
 
 }
+
 
 
