@@ -22,17 +22,18 @@ h1 {
     font-family: 'Pacifico', cursive;
 }
 
-.images {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 .images img {
   width: 150px;
-  border-radius: 10px;
+  height: 150px;
+  object-fit: cover; /* Keeps proportions and crops instead of stretch */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
+.images img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
 button {
   padding: 15px 30px;
   background: #ff5f6d;
@@ -115,4 +116,5 @@ button:hover {
 @keyframes floatUp {
   0% { transform: translateY(0); }
   100% { transform: translateY(-120vh); }
+
 }
